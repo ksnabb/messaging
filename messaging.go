@@ -12,7 +12,6 @@ type group struct {
 var groups = make(map[string]*group)
 
 // this is the main application that is running for each group
-// created.
 func (g *group) run() {
 	for {
 		select {
@@ -48,13 +47,13 @@ func Subscribe(channel chan []byte, groupName string) {
 	g.subscribe <- channel
 }
 
-// Unsubscribe from a channel
+// Unsubscribe a channel from a group
 func Unsubscribe(channel chan []byte, groupName string) {
 	g := getGroup(groupName)
 	g.unsubscribe <- channel
 }
 
-// Send message to group
+// Send a message to a group
 func Send(message []byte, groupName string) {
 	g := getGroup(groupName)
 	g.send <- message

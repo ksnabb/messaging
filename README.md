@@ -1,3 +1,3 @@
 # Messaging.go
 
-Simple messaging application for publish subscribe scenarios.
+Simple messaging package that provides a publish-subscribe pattern.

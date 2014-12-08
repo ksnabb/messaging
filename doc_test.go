@@ -1,14 +1,15 @@
 package messaging
 
+var c chan []byte = make(chan []byte, 10)
+
 func ExampleSubscribe() {
-  c := make(chan []byte, 10)
-  messaging.Subscribe(c, "examplegroup")
+	Subscribe(c, "examplegroup")
 }
 
 func ExampleUnsubscribe() {
-  messaging.Unsubscribe(c, "examplegroup")
+	Unsubscribe(c, "examplegroup")
 }
 
 func ExampleSend() {
-  messaging.Send([]byte("hello group"), "examplegroup")
+	Send([]byte("hello group"), "examplegroup")
 }

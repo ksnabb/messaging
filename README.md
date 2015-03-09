@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ksnabb/messaging.svg?branch=ci-travis)](https://travis-ci.org/ksnabb/messaging)
+
 # Messaging.go
 
 Simple messaging package that provides a publish-subscribe pattern.
